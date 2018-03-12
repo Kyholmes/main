@@ -14,6 +14,7 @@ public class ViewAppointmentCommand extends Command {
 
     @Override
     public CommandResult execute() throws CommandException {
+
         return new CommandResult(MESSAGE_SUCCESS);
     }
 }
