@@ -1,7 +1,5 @@
 package seedu.address.storage;
 
-import java.util.Date;
-
 import javax.xml.bind.annotation.XmlValue;
 
 import seedu.address.commons.exceptions.IllegalValueException;
@@ -27,9 +25,9 @@ public class XmlAdaptedAppointment {
     /**
      * Constructs a {@code XmlAdaptedAppointment} with the given {@code patientName} and {@code dateTime}.
      */
-    public XmlAdaptedAppointment(String patientName, Date dateTime) {
+    public XmlAdaptedAppointment(String patientName, String dateTime) {
         this.patientName = patientName;
-        this.dateTime = dateTime.toString();
+        this.dateTime = dateTime;
     }
 
     /**
@@ -43,7 +41,7 @@ public class XmlAdaptedAppointment {
     }
 
     public Appointment toModelType() throws IllegalValueException {
-        return new Appointment(patientName, new Date());
+        return new Appointment(patientName, dateTime);
     }
     @Override
     public boolean equals(Object other) {

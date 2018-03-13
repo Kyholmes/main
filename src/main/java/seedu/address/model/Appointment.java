@@ -10,9 +10,9 @@ import java.util.Date;
 public class Appointment {
 
     public static final int APPOINTMENT_DURATION = 30;
-    private Date appointmentDateTime;
+    private String appointmentDateTime;
     private String patientName;
-    public Appointment(String patientName, Date appointmentDateTime) {
+    public Appointment(String patientName, String appointmentDateTime) {
         this.patientName = patientName;
         this.appointmentDateTime = appointmentDateTime;
     }
@@ -21,7 +21,7 @@ public class Appointment {
         return this.patientName;
     }
 
-    public Date getAppointmentDateTime() {
+    public String getAppointmentDateTime() {
         return this.appointmentDateTime;
     }
 }
