@@ -11,7 +11,7 @@ public class UniqueAppointmentListTest {
     public ExpectedException thrown = ExpectedException.none();
 
     @Test
-    public void asObservableList_modifyList_throwsUnsupportOperationException() {
+    public void asObservableList_modifyList_throwsUnsupportedOperationException() {
         UniqueAppointmentList uniqueAppointmentListList = new UniqueAppointmentList();
         thrown.expect(UnsupportedOperationException.class);
         uniqueAppointmentListList.asObservableList().remove(0);
