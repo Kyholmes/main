@@ -21,4 +21,9 @@ public interface ReadOnlyAddressBook {
      */
     ObservableList<Tag> getTagList();
 
+    /**
+     * Returns an unmodifiable view of the appointment list.
+     * This list will not contain any duplicate appointment.
+     */
+    ObservableList<Appointment> getAppointmentList();
 }
