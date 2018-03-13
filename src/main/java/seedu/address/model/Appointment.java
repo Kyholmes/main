@@ -2,7 +2,6 @@ package seedu.address.model;
 
 import java.util.Date;
 
-import seedu.address.model.person.Person;
 
 /**
  * Patient appointment in IMDB
@@ -12,14 +11,14 @@ public class Appointment {
 
     public static final int APPOINTMENT_DURATION = 30;
     private Date appointmentDateTime;
-    private Person person;
-    public Appointment(Person person, Date appointmentDateTime) {
-        this.person = person;
+    private String patientName;
+    public Appointment(String patientName, Date appointmentDateTime) {
+        this.patientName = patientName;
         this.appointmentDateTime = appointmentDateTime;
     }
 
-    public Person getPerson() {
-        return this.person;
+    public String getPatientName() {
+        return this.patientName;
     }
 
     public Date getAppointmentDateTime() {
