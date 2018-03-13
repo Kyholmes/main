@@ -49,4 +49,12 @@
     </persons>
     <tags>friends</tags>
     <tags>owesMoney</tags>
+    <appointments>
+        <patientName>Elle Meyer</patientName>
+        <dateTime>2018-03-20 12:30</dateTime>
+    </appointments>
+    <appointments>
+        <patientName>George Best</patientName>
+        <dateTime>2018-03-25 15:30</dateTime>
+    </appointments>
 </addressbook>
