@@ -54,7 +54,6 @@ public class XmlAdaptedAppointment {
         if (!(other instanceof XmlAdaptedAppointment)) {
             return false;
         }
-        
         return (patientName.equals(((XmlAdaptedAppointment) other).patientName)
                 && dateTime.equals(((XmlAdaptedAppointment) other).dateTime));
     }
