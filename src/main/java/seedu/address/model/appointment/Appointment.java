@@ -1,8 +1,5 @@
 package seedu.address.model.appointment;
 
-import java.util.Date;
-
-
 /**
  * Patient appointment in IMDB
  * Guarantees: details are present and not null, field values are validated, immutable.
