@@ -162,6 +162,10 @@ public class AddressBook implements ReadOnlyAddressBook {
         tags.add(t);
     }
 
+    public void addAppointment(Appointment appt) throws UniqueAppointmentList.DuplicateAppointmentException {
+        appointments.add(appt);
+    }
+
     /**
      * Remove {@code tag} from {@code person}
      */

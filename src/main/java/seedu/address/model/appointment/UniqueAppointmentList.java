@@ -85,7 +85,7 @@ public class UniqueAppointmentList implements Iterable<Appointment> {
     public void add(Appointment toAdd) throws DuplicateAppointmentException {
         requireNonNull(toAdd);
         if (contains(toAdd)) {
-           throw new DuplicateAppointmentException();
+            throw new DuplicateAppointmentException();
         }
 
         internalList.add(toAdd);
