@@ -88,6 +88,6 @@ public class PatientListPanel extends UiPart<Region> {
 
     @Subscribe
     public void handleAddressBookChangedEvent(ImdbChangedEvent abce) {
-        setConnections(abce.data.getUniquePatientQueue());
+        setConnections(abce.data.getPersonList());
     }
 }
