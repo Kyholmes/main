@@ -31,6 +31,7 @@ import seedu.address.logic.commands.RemoveRecordCommand;
 import seedu.address.logic.commands.SelectCommand;
 import seedu.address.logic.commands.UndoCommand;
 import seedu.address.logic.commands.ViewAppointmentCommand;
+import seedu.address.logic.commands.ViewQueueCommand;
 import seedu.address.logic.login.LoginManager;
 import seedu.address.logic.parser.exceptions.ParseException;
 
@@ -188,6 +189,28 @@ public class ImdbParser {
                 throw new ParseException(String.format(LoginCommand.MESSAGE_NOT_LOGGED_IN,
                         LoginCommand.MESSAGE_USAGE));
 
+            case DeleteAppointmentCommand.COMMAND_WORD:
+                throw new ParseException(String.format(LoginCommand.MESSAGE_NOT_LOGGED_IN,
+                        LoginCommand.MESSAGE_USAGE));
+
+            case DeleteAppointmentCommand.COMMAND_ALIAS:
+                throw new ParseException(String.format(LoginCommand.MESSAGE_NOT_LOGGED_IN,
+                        LoginCommand.MESSAGE_USAGE));
+            case AddAppointmentCommand.COMMAND_WORD:
+                throw new ParseException(String.format(LoginCommand.MESSAGE_NOT_LOGGED_IN,
+                        LoginCommand.MESSAGE_USAGE));
+            case AddAppointmentCommand.COMMAND_ALIAS:
+                throw new ParseException(String.format(LoginCommand.MESSAGE_NOT_LOGGED_IN,
+                        LoginCommand.MESSAGE_USAGE));
+
+            case ViewQueueCommand.COMMAND_WORD:
+                throw new ParseException(String.format(LoginCommand.MESSAGE_NOT_LOGGED_IN,
+                        LoginCommand.MESSAGE_USAGE));
+
+            case ViewQueueCommand.COMMAND_ALIAS:
+                throw new ParseException(String.format(LoginCommand.MESSAGE_NOT_LOGGED_IN,
+                        LoginCommand.MESSAGE_USAGE));
+
             case AddPatientQueueCommand.COMMAND_WORD:
                 throw new ParseException(String.format(LoginCommand.MESSAGE_NOT_LOGGED_IN,
                         LoginCommand.MESSAGE_USAGE));
@@ -332,6 +355,12 @@ public class ImdbParser {
             case ViewAppointmentCommand.COMMAND_ALIAS:
                 return new ViewAppointmentCommandParser().parse(arguments);
 
+            case ViewQueueCommand.COMMAND_WORD:
+                return new ViewQueueCommand();
+
+            case ViewQueueCommand.COMMAND_ALIAS:
+                return new ViewQueueCommand();
+
             case RecordCommand.COMMAND_WORD:
                 return new RecordCommandParser().parse(arguments);
 
@@ -475,6 +504,12 @@ public class ImdbParser {
                 return new AddAppointmentCommandParser().parse(arguments);
             case AddAppointmentCommand.COMMAND_ALIAS:
                 return new AddAppointmentCommandParser().parse(arguments);
+
+            case ViewQueueCommand.COMMAND_WORD:
+                return new ViewQueueCommand();
+
+            case ViewQueueCommand.COMMAND_ALIAS:
+                return new ViewQueueCommand();
 
             case AddPatientQueueCommand.COMMAND_WORD:
                 return new AddPatientQueueCommandParser().parse(arguments);
