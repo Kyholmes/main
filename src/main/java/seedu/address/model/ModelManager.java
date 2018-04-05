@@ -177,7 +177,7 @@ public class ModelManager extends ComponentManager implements Model {
         requireNonNull(predicate);
         int patientIndex = getPatientIndex(predicate);
         imdb.addPatientToQueue(patientIndex);
-        indicateAddressBookChanged();
+//        indicateAddressBookChanged();
 
         return filteredPatients.get(patientIndex);
     }
@@ -185,7 +185,7 @@ public class ModelManager extends ComponentManager implements Model {
     @Override
     public synchronized Patient removePatientFromQueue() throws PatientNotFoundException {
         int patientIndexToRemove = imdb.removePatientFromQueue();
-        indicateAddressBookChanged();
+//        indicateAddressBookChanged();
         return filteredPatients.get(patientIndexToRemove);
     }
 
